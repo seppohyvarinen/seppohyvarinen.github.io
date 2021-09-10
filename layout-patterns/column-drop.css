@@ -25,7 +25,7 @@ p {
 .footer {
   text-align: center;
   border-radius: 35px;
-  margin: 10px;
+  margin: 5px;
 }
 .page {
   display: grid;
@@ -62,14 +62,14 @@ p {
 }
 @media (min-width: 800px) {
   .page {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 1fr 2fr 1fr;
     grid-template-areas:
       ". head ."
       "content1 content2 content3"
       "footer footer footer";
 
-    width: 799px;
+    
 
   }
 }
