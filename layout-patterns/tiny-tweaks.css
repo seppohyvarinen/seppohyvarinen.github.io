@@ -37,7 +37,7 @@ p {
     "content2"
     "content3"
     "footer";
-  height: 150vh;
+  height: 100vh;
 }
 .head {
   background-color: rgb(212, 235, 255);
@@ -59,17 +59,4 @@ p {
 .footer {
   background-color: rgb(255, 94, 215);
   grid-area: footer;
-}
-@media (min-width: 800px) {
-  .page {
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 1fr 2fr 1fr;
-    grid-template-areas:
-      ". head ."
-      "content1 content2 content3"
-      "footer footer footer";
-
-    height: 100vh;
-
-  }
 }

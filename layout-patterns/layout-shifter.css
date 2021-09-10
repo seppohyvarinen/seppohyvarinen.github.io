@@ -60,16 +60,26 @@ p {
   background-color: rgb(255, 94, 215);
   grid-area: footer;
 }
+
+@media (min-width: 650px) {
+    .page {
+        height: 120vh;
+    }
+}
 @media (min-width: 800px) {
   .page {
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr 1fr;
     grid-template-areas:
-      ". head ."
-      "content1 content2 content3"
-      "footer footer footer";
+      "head head"
+      "content1 content2"
+      "content1 content3"
+      "footer footer";
 
     height: 100vh;
+    width: 799px;
+    margin-left: auto;
+    margin-right: auto;
 
   }
 }
