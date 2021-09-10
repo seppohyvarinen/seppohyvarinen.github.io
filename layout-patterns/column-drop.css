@@ -21,7 +21,7 @@ p {
 
 .head,
 .content-one,
-.content-two,
+.content-two, .content-three,
 .footer {
   text-align: center;
   border-radius: 35px;
