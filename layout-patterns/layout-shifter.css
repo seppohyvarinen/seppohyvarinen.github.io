@@ -61,12 +61,12 @@ p {
   grid-area: footer;
 }
 
-@media (min-width: 650px) {
+@media (min-width: 600px) {
     .page {
         height: 120vh;
     }
 }
-@media (min-width: 800px) {
+@media (min-width: 850px) {
   .page {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 2fr 2fr 1fr;
