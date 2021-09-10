@@ -19,6 +19,10 @@ p {
   font-size: x-large;
 }
 
+/* Settings for the head, content and footer classes (align text to center of divs
+and adjust the margin & border-radius)
+*/
+
 .head,
 .content-one,
 .content-two, .content-three,
@@ -27,6 +31,8 @@ p {
   border-radius: 35px;
   margin: 5px;
 }
+/*grid settings for smaller screen, the elements are placed on top of each other and the height is over the size of the screen (150vh)
+so there's more space.*/
 .page {
   display: grid;
   grid-template-columns: 1fr;
@@ -60,6 +66,8 @@ p {
   background-color: rgb(255, 94, 215);
   grid-area: footer;
 }
+
+/*grid settings for larger screens. here we change the layout so there's three columns and the grid fills the screen width*/
 @media (min-width: 800px) {
   .page {
     grid-template-columns: 1fr 2fr 1fr;

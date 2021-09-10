@@ -19,6 +19,10 @@ p {
   font-size: x-large;
 }
 
+/* Settings for the head, content and footer classes (align text to center of divs
+and adjust tje margin & border-radius)
+*/
+
 .head,
 .content-one,
 .content-two, .content-three,
@@ -27,6 +31,9 @@ p {
   border-radius: 35px;
   margin: 5px;
 }
+
+/*grid settings for smaller screen, the elements are placed on top of each other and the height is over the size of the screen
+so there's more space.*/
 .page {
   display: grid;
   grid-template-columns: 1fr;
@@ -39,6 +46,7 @@ p {
     "footer";
   height: 150vh;
 }
+/* declare the grid areas for each div class and define the colors*/
 .head {
   background-color: rgb(212, 235, 255);
   grid-area: head;
@@ -61,11 +69,15 @@ p {
   grid-area: footer;
 }
 
+/* additional height adjustment for the grid typical for the layóut-shifter style*/
+
 @media (min-width: 600px) {
     .page {
         height: 120vh;
     }
 }
+/*grid settings for larger screens. here we change the layout so there's two columns and the grid has a
+static width and it's centered*/
 @media (min-width: 850px) {
   .page {
     grid-template-columns: 1fr 1fr;

@@ -19,6 +19,10 @@ p {
   font-size: x-large;
 }
 
+/* Settings for the head, content and footer classes (align text to center of divs
+and adjust the margin & border-radius)
+*/
+
 .head,
 .content-one,
 .content-two, .content-three,
@@ -27,6 +31,8 @@ p {
   border-radius: 35px;
   margin: 5px;
 }
+
+/*grid settings for the tiny tweaks style. As we can see, the layout doesn't change at all no matter what screen size*/
 .page {
   display: grid;
   grid-template-columns: 1fr;
