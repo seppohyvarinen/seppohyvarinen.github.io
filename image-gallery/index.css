@@ -1,10 +1,14 @@
 * {
   box-sizing: border-box;
 }
-
+/*background image settings, here i'm using linear-gradient option to have 2 bg colors*/
 body {
   background-image: linear-gradient(rgb(33, 9, 49), rgb(242, 140, 255));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
+
+/*main grid settings for the whole page, to have areas for header and the image gallery*/
 .page {
   display: grid;
   grid-template-rows: auto;
@@ -12,6 +16,8 @@ body {
     "header"
     "gallery";
 }
+
+/*settings for the page header*/
 .header {
   grid-area: header;
   font-family: monospace;
@@ -22,6 +28,7 @@ body {
   padding-bottom: 10px;
   color: rgb(234, 217, 236);
 }
+/*settings for the gallery, i'm using the repeat (auto-fit, minmax) function to fit the images nicely and to make them switch rows when needed*/
 .gallery {
   grid-area: gallery;
   display: grid;
@@ -29,6 +36,7 @@ body {
   grid-gap: 0.8vw;
   grid-row-gap: 20px;
 }
+/*img settings*/
 img {
   max-width: 100%;
   height: 100%;
