@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(rgb(33, 9, 49), rgb(242, 140, 255));
+}
+.page {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header"
+    "gallery";
+}
+.header {
+  grid-area: header;
+  font-family: monospace;
+  font-style: oblique;
+  font-variant: small-caps;
+  font-size: xx-large;
+  text-align: center;
+  padding-bottom: 10px;
+  color: rgb(234, 217, 236);
+}
+.gallery {
+  grid-area: gallery;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 0.8vw;
+  grid-row-gap: 20px;
+}
+img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

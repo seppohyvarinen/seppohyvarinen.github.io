@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+body {
+  background-color: rgba(80, 191, 255, 0.972);
+}
+h1 {
+  font-size: 1.5cm;
+}
+h2 {
+  font-size: 1cm;
+}
+h3 {
+  font-size: 0.7cm;
+}
+p {
+  font-size: x-large;
+}
+
+/* Settings for the head, content and footer classes (align text to center of divs
+and adjust the margin & border-radius)
+*/
+
+.head,
+.content-one,
+.content-two,
+.footer {
+  text-align: center;
+  border-radius: 35px;
+  margin: 10px;
+}
+.footer p {
+  text-align: left;
+  padding-left: 20px;
+  padding-top: 90px;
+}
+.content-one p {
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/*grid settings for smaller screen, the elements are placed on top of each other and the height is over the size of the screen (150vh)
+so there's more space.*/
+.page {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr, 4fr, 4fr, 1fr;
+  grid-template-areas:
+    "head"
+    "content1"
+    "content2"
+    "footer";
+  height: 100vh;
+}
+.head {
+  background-color: rgb(212, 235, 255);
+  grid-area: head;
+}
+.content-one {
+  background-color: rgb(222, 169, 246);
+  grid-area: content1;
+}
+.content-two {
+  background-color: rgb(218, 137, 255);
+  grid-area: content2;
+}
+.footer {
+  background-color: rgb(255, 94, 215);
+  grid-area: footer;
+}
+
+/*grid settings for larger screens. here we change the layout so there's two columns and the grid has a
+static width and it's centered*/
+@media (min-width: 769px) {
+  .page {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 4fr 1fr;
+    grid-template-areas:
+      "head head"
+      "content1 content2"
+      "footer footer";
+
+    width: 768px;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
