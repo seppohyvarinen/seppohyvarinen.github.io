@@ -1,0 +1,116 @@
+/*
+Settings for margin all over
+*/
+
+* {
+  margin: 8px;
+}
+
+/*
+The grayish bg color*/
+body {
+  background-color: rgba(233, 233, 233, 0.966);
+}
+
+/*margin settings for the container id*/
+#container {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.content_holder {
+  padding: 8px;
+}
+.content_holder h1 {
+  font-style: italic;
+}
+
+/*bg color for the text containers*/
+
+.text_container_left,
+.text_container_right {
+  background-color: rgb(253, 234, 192);
+}
+
+.text_container_left h1,
+.text_container_left h2,
+.text_container_right h1,
+.text_container_right h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+
+.text_container_left p,
+.text_container_right p {
+  margin-top: -10px;
+}
+
+/*Specifies the new font for the first line after h1 element*/
+
+h1 + p:first-line {
+  font-family: "Courier New", Courier, monospace;
+}
+/*Specifies the new font size for the first letter after h1 element*/
+
+h1 + p:first-letter {
+  font-size: 2em;
+}
+
+/* Margins for the h1:s in the middle of the text containers*/
+
+.text_container_right h1:nth-of-type(2),
+.text_container_left h1:nth-of-type(2) {
+  margin-top: 36px;
+}
+
+/*Sets the default link color*/
+a {
+  color: blue;
+}
+
+/*Sets the url visible for the local link (first link that appears actually but I couldn't find local-link::after property anywhere
+so I decided to go about it like this*/
+
+a:nth-child(1)::after {
+  content: " " attr(href);
+
+  font-family: "Courier New", Courier, monospace;
+  color: rgb(255, 0, 0);
+}
+
+/*Sets the material icon after the second link*/
+a:nth-child(2)::after {
+  font-family: "Material Icons";
+  content: "\e89e";
+  -webkit-font-feature-settings: "liga" 1;
+  -moz-font-feature-settings: "liga" 1;
+  font-feature-settings: "liga" 1;
+  color: red;
+}
+
+/*last p of left container gets the red mark*/
+.text_container_left p:last-of-type::after {
+  font-family: "Material Icons";
+  content: "\e047";
+  -webkit-font-feature-settings: "liga" 1;
+  -moz-font-feature-settings: "liga" 1;
+  font-feature-settings: "liga" 1;
+  color: red;
+}
+
+/*Design for responsiviness, the grids are placed as in the example*/
+
+@media (min-width: 769px) {
+  .content_holder {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "left right";
+    grid-column-gap: 2vh;
+  }
+  .text_container_left {
+    grid-area: left;
+  }
+  .text_container_right {
+    grid-area: right;
+  }
+}
