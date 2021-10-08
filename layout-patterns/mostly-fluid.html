@@ -11,6 +11,17 @@
     <div class="page">
       <div class="head">
         <h1>Header</h1>
+        <ul class="menu">
+          <li><a class="menuItem" href="#">Home</a></li>
+          <li><a class="menuItem" href="#">Profile</a></li>
+          <li><a class="menuItem" href="#">About</a></li>
+          <li><a class="menuItem" href="#">Contacts</a></li>
+        </ul>
+        <button class="hamburger">
+          <!-- material icons https://material.io/resources/icons/ -->
+          <i class="menuIcon material-icons">menu</i>
+          <i class="closeIcon material-icons">close</i>
+        </button>
       </div>
 
       <div class="content-one">
@@ -27,5 +38,30 @@
         <h3>Footer stuff</h3>
       </div>
     </div>
+
+    <script>
+      const menu = document.querySelector(".menu");
+      const menuItems = document.querySelectorAll(".menuItem");
+      const hamburger = document.querySelector(".hamburger");
+      const closeIcon = document.querySelector(".closeIcon");
+      const menuIcon = document.querySelector(".menuIcon");
+
+      function toggleMenu() {
+        if (menu.classList.contains("showMenu")) {
+          menu.classList.remove("showMenu");
+          closeIcon.style.display = "none";
+          menuIcon.style.display = "block";
+        } else {
+          menu.classList.add("showMenu");
+          closeIcon.style.display = "block";
+          menuIcon.style.display = "none";
+        }
+      }
+      menuItems.forEach(function (menuItem) {
+        menuItem.addEventListener("click", toggleMenu);
+      });
+
+      hamburger.addEventListener("click", toggleMenu);
+    </script>
   </body>
 </html>
