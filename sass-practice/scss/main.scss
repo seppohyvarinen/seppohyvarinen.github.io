@@ -1,0 +1,52 @@
+@use "./colors.scss";
+@use "./fonts.scss";
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: lighten($color: colors.$bg, $amount: 13);
+}
+@mixin centerize {
+  text-align: center;
+}
+.page {
+  overflow: auto;
+  font-family: fonts.$main-f;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.header {
+  @include centerize();
+  grid-area: header;
+  font-size: xx-large;
+}
+
+.navi {
+  @include centerize();
+  grid-area: navi;
+  button {
+    background: colors.$button;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 5px 10px #888888;
+    &:hover {
+      background: colors.$hover;
+    }
+  }
+}
+.text {
+  text-align: left;
+  font-size: x-large;
+  margin: 20px;
+  overflow-wrap: break-word;
+  padding: 20px;
+  border-radius: 30px;
+  background-image: linear-gradient(#e664b4, colors.$bg);
+
+  grid-area: text;
+}
+.text2 {
+  @extend .text;
+  @include centerize();
+  grid-area: text2;
+}

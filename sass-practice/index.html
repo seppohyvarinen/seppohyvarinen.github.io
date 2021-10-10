@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="page">
+      <div class="header">
+        <h1>My awesome sass page</h1>
+      </div>
+      <div class="navi">
+        <button>Page One</button>
+        <button>Page Two</button>
+        <button>Page Three</button>
+      </div>
+      <div class="text">
+        <p>
+          @use "./colors.scss";<br />
+          @use "./fonts.scss";<br />
+          * { box-sizing: border-box; } <br />
+          body { background-color: lighten($color: colors.$bg, $amount: 13);
+          }<br />
+          @mixin centerize { text-align: center; }<br />
+          .page { overflow: auto; font-family: fonts.$main-f; margin-left: 10px;
+          margin-right: 10px; }<br />
+          .header { @include centerize(); grid-area: header; font-size:
+          xx-large; }<br />
+          .navi { @include centerize(); grid-area: navi; button { background:
+          colors.$button; padding: 20px; border-radius: 20px; box-shadow: 5px
+          10px #888888; &:hover { background: colors.$hover; } } }<br />
+          .text { font-size: x-large; margin: 20px; overflow-wrap: break-word;
+          padding: 20px; border-radius: 30px; background-image:
+          linear-gradient(#e664b4, colors.$bg); @include centerize(); grid-area:
+          text; } <br />.text2 { @extend .text; grid-area: text2; }
+        </p>
+      </div>
+      <div class="text2">
+        hölöpönpölöpönhölöpönpölöpönhölöpönpölö
+        pönhölöpönpölöpönhölöpönpölöpönhölöpönpölöpön
+        hölöpönpölöpönhölöpönpölöpönhölöpönpölöpönhölöp
+        önpölöpönhölöpönpölöpönhölöpönpölöpön
+      </div>
+    </div>
+  </body>
+</html>

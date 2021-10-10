@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #6106c8;
+}
+
+.page {
+  overflow: auto;
+  font-family: monospace;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.header {
+  text-align: center;
+  grid-area: header;
+  font-size: xx-large;
+}
+
+.navi {
+  text-align: center;
+  grid-area: navi;
+}
+.navi button {
+  background: #42c8f0;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 5px 10px #888888;
+}
+.navi button:hover {
+  background: #42f0bc;
+}
+
+.text, .text2 {
+  text-align: left;
+  font-size: x-large;
+  margin: 20px;
+  overflow-wrap: break-word;
+  padding: 20px;
+  border-radius: 30px;
+  background-image: linear-gradient(#e664b4, #420488);
+  grid-area: text;
+}
+
+.text2 {
+  text-align: center;
+  grid-area: text2;
+}
+
+/*# sourceMappingURL=main.css.map */
