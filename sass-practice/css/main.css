@@ -18,6 +18,9 @@ body {
   grid-area: header;
   font-size: xx-large;
 }
+.header h1 {
+  text-shadow: 3px 6px #c62ad4;
+}
 
 .navi {
   text-align: center;
