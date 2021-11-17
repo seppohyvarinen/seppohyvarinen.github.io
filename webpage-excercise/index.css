@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+body {
+  background-image: url("img/flamingos_unsplash.jpg");
+  background-size: 120% auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-clip: border-box;
+}
+
+h1 {
+  font-size: 72px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  color: rgb(255, 176, 187);
+  text-align: center;
+  margin-top: 50vh;
+}
+
+.pic {
+  width: 300px;
+  height: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  object-fit: fill;
+}
+
+.speciesheader {
+  margin-top: 5vh;
+  text-align: left;
+  margin-left: 10px;
+}
+.speciestext {
+  text-align: left;
+  margin-left: 10px;
+}
+
+p {
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  color: white;
+}
+.picname {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  text-align: center;
+  color: white;
+  margin-top: 10px;
+}
+.species {
+  text-align: center;
+  font-family: "Inter", sans-serif;
+
+  margin-top: 30px;
+}
+.species button {
+  background-color: white;
+  padding: 20px;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 40px;
+}
+.species button:hover {
+  background-color: rgb(255, 176, 187);
+}
+
+.navi {
+  overflow: hidden;
+  background-color: rgb(18, 18, 18);
+  background-size: auto;
+
+  padding-left: 24px;
+  padding-right: 24px;
+  position: relative;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.navi #myLinks {
+  display: none;
+  height: 100vh;
+  width: 100%;
+
+  text-align: center;
+  justify-content: space-between;
+  margin-top: 92px;
+  align-items: center;
+}
+.navi a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+.navi a:hover {
+  color: rgb(255, 176, 187);
+}
+
+.navi a.icon {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+.logo {
+  width: 50%;
+}
+#active {
+  background-color: rgb(18, 18, 18);
+  color: white;
+}
+.icon.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.icon.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.icon.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (min-width: 768px) {
+  .bar {
+    display: none;
+  }
+  .logo {
+    height: 100px;
+    width: 400px;
+  }
+  .navi {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navi #myLinks {
+    display: block;
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 100px;
+  }
+
+  .pic {
+    width: 192px;
+    height: 192px;
+  }
+
+  .images {
+    display: grid;
+    width: 600px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "1 2 3"
+      "4 5 6";
+
+    grid-gap: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #one {
+    grid-area: "1";
+  }
+  #two {
+    grid-area: "2";
+  }
+  #three {
+    grid-area: "3";
+  }
+  #four {
+    grid-area: "4";
+  }
+  #five {
+    grid-area: "5";
+  }
+  #six {
+    grid-area: "6";
+  }
+
+  a {
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+}

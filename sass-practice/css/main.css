@@ -23,7 +23,6 @@ body {
 }
 
 .navi {
-  text-align: center;
   grid-area: navi;
 }
 .navi button {
